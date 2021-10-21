@@ -1,0 +1,32 @@
+diff -Naur swift/utils/build-presets.ini swift-patched/utils/build-presets.ini
+--- swift/utils/build-presets.ini	2021-09-19 23:21:58.000000000 -0700
++++ swift-patched/utils/build-presets.ini	2021-10-21 13:47:25.129923758 -0700
+@@ -782,10 +782,8 @@
+ swiftpm
+ swift-driver
+ xctest
+-libicu
+ libcxx
+ 
+-build-ninja
+ install-llvm
+ install-swift
+ install-lldb
+@@ -793,7 +791,6 @@
+ install-swiftpm
+ install-swift-driver
+ install-xctest
+-install-libicu
+ install-prefix=/usr
+ install-libcxx
+ install-sourcekit-lsp
+@@ -812,9 +809,6 @@
+ # Path to the root of the installation filesystem.
+ install-destdir=%(install_destdir)s
+ 
+-# Path to the .tar.gz package we would create.
+-installable-package=%(installable_package)s
+-
+ # This ensures the default module cache
+ # location is local to this run, allowing
+ # to schedule multiple builds safely

@@ -1,0 +1,24 @@
+diff -Naur swift-corelibs-foundation/CoreFoundation/Base.subproj/CFPlatform.c swift-corelibs-foundation-patched/CoreFoundation/Base.subproj/CFPlatform.c
+--- swift-corelibs-foundation/CoreFoundation/Base.subproj/CFPlatform.c	2021-07-27 02:15:35.000000000 -0700
++++ swift-corelibs-foundation-patched/CoreFoundation/Base.subproj/CFPlatform.c	2021-10-21 00:31:15.836132704 -0700
+@@ -1419,7 +1419,7 @@
+ #pragma mark -
+ #pragma mark Windows and Linux Helpers
+ 
+-#if TARGET_OS_WIN32 || TARGET_OS_LINUX
++#if TARGET_OS_WIN32 
+ 
+ #include <stdio.h>
+ 
+diff -Naur swift-corelibs-foundation/CoreFoundation/Base.subproj/CoreFoundation_Prefix.h swift-corelibs-foundation-patched/CoreFoundation/Base.subproj/CoreFoundation_Prefix.h
+--- swift-corelibs-foundation/CoreFoundation/Base.subproj/CoreFoundation_Prefix.h	2021-07-27 02:15:35.000000000 -0700
++++ swift-corelibs-foundation-patched/CoreFoundation/Base.subproj/CoreFoundation_Prefix.h	2021-10-21 00:31:56.596132511 -0700
+@@ -414,7 +414,7 @@
+ #define CF_TEST_PRIVATE CF_PRIVATE
+ #endif
+ 
+-#if TARGET_OS_LINUX || TARGET_OS_WIN32
++#if TARGET_OS_WIN32
+ 
+ #include <stdarg.h>
+ 
